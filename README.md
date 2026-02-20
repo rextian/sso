@@ -73,9 +73,9 @@ vim config.php
 ```apache
 <VirtualHost *:80>
     ServerName sso.yourdomain.com
-    DocumentRoot /path/to/rextian-sso
+    DocumentRoot /path/to/sso
     
-    <Directory /path/to/rextian-sso>
+    <Directory /path/to/sso>
         AllowOverride All
         Require all granted
     </Directory>
@@ -87,7 +87,7 @@ vim config.php
 server {
     listen 80;
     server_name sso.yourdomain.com;
-    root /path/to/rextian-sso;
+    root /path/to/sso;
     index index.php;
 
     location / {
@@ -105,9 +105,9 @@ server {
 
 5. **设置文件权限**
 ```bash
-chmod -R 755 /path/to/rextian-sso
-chmod -R 777 /path/to/rextian-sso/uploads
-chmod -R 777 /path/to/rextian-sso/data
+chmod -R 755 /path/to/sso
+chmod -R 777 /path/to/sso/uploads
+chmod -R 777 /path/to/sso/data
 ```
 
 6. **访问系统**
@@ -124,7 +124,7 @@ chmod -R 777 /path/to/rextian-sso/data
 ## 📁 项目结构
 
 ```
-rextian-sso/
+sso/
 ├── api/                    # API接口目录
 │   ├── apps/              # 应用管理API
 │   ├── audit-logs/        # 审计日志API
